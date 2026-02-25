@@ -8,6 +8,9 @@
 
 <p>using the terminal not IDE </p>
 
+<p> if this is in git pushed latest 2 </p>
+
+
 </body>
 
 </html>
