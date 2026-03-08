@@ -1,0 +1,35 @@
+<settings>
+
+<servers>
+  <server>
+    <id>project-codeart2</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+
+<profiles>
+  <profile>
+    <id>project-codeart2</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>project-codeart2</id>
+        <url>https://project-270141934220.d.codeartifact.eu-west-2.amazonaws.com/maven/codeart2/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+
+<mirrors>
+  <mirror>
+    <id>project-codeart2</id>
+    <name>project-codeart2</name>
+    <url>https://project-270141934220.d.codeartifact.eu-west-2.amazonaws.com/maven/codeart2/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+
+</settings>
