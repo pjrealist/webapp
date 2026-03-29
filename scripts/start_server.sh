@@ -1,5 +1,9 @@
 #!/bin/bash
-sudo systemctl start tomcat.service
-sudo systemctl enable tomcat.service
-sudo systemctl start httpd.service
-sudo systemctl enable httpd.service
+set -e
+
+sudo systemctl daemon-reexec
+sudo systemctl start tomcat || true
+sudo systemctl enable tomcat || true
+
+sudo systemctl start httpd
+sudo systemctl enable httpd
